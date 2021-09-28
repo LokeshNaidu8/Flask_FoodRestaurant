@@ -1,0 +1,49 @@
+{% extends 'adminlayout.html' %}
+{% block body %}
+
+<div class="container p-2">
+    <div class="container mt-5 w-25 ">
+        <h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif">Update Food</h1>
+        <p style="color: rgb(0, 153, 255);">{{msg}}</p>
+
+    </div>
+
+
+    <div class="container mt-3 w-50 p-5">
+
+        <form method="POST" action="/updatingFood">
+            <div class="mb-3 ">
+                <label for="foodid" class="form-label">Food ID</label>
+                <input type="number" class="form-control" id="foodid" aria-describedby="foodid" name="updatefoodid" value="{{food[0]}}" readonly>
+
+            </div>
+            <div class="mb-3 ">
+                <label for="foodname" class="form-label">Food Name</label>
+                <input type="text" class="form-control" id="foodname" aria-describedby="foodname" name='updatefoodname' value="{{food[1]}}"
+                    required>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="updatefoodtype" id="inlineRadio1" value="veg" checked>
+                <label class="form-check-label" for="veg">VEG</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="updatefoodtype" id="inlineRadio2" value="nonveg">
+                <label class="form-check-label" for="nonveg">NON-VEG</label>
+            </div>
+            <br>
+            <br>
+
+            <div class="mb-3">
+                <label for="foodprice" class="form-label">Food Price</label>
+                <input type="number" class="form-control" id="foodprice" name="updatefoodprice" value="{{food[3]}}" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-4">Submit</button>
+        </form>
+    </div>
+
+
+</div>
+
+{% endblock %}

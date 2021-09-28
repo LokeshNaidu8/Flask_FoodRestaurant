@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Lew Restaurant</title>
+</head>
+
+<body>
+
+
+    <div class="alert alert-secondary text-center alert-dismissible">
+
+        <strong>{{msg}}</strong> : Welcome to our LEW Restaurant and have a Happy MEAL
+    </div>
+
+    <div class="container  p-2">
+
+        <div class="container-fluid  ">
+            <a href="/" type="button" class=" btn btn-lg btn-danger "> <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                    height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                </svg> Logout</a>
+        </div>
+        <div class="container mt-5 w-25">
+            <h1 style="font-family: monospace;">&#64;YourProfile</h1>
+        </div>
+
+    </div>
+
+    <div class="container mt-5 w-25">
+
+        <form method="POST" action="/index">
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Username</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" name="welname" value="{{name}}"
+                    readonly>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Mobile Number</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" name="welphone" value="{{phone}}"
+                    readonly>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Your Data and Menu</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="selector">
+                    <option selected>Food Menu</option>
+                    <option>Your Orders</option>
+                    <option>Remaining Balance</option>
+
+                </select>
+            </div>
+            <button type="button" class="btn btn-primary">Go</button>
+        </form>
+    </div>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+
+
+</html>

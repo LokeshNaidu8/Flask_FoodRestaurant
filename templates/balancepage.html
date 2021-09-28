@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+
+<div class="alert alert-secondary text-center alert-dismissible">
+
+    <strong>{{name.upper()}}</strong>
+</div>
+
+<div class="container text-center ">
+    <div class="container mt-5 w-50">
+        <h1>Balance :</h1>
+
+    </div>
+    <label class="text-center" style="font-size: 30px;font-weight: bold;">&#8377 {{balance}}</label>
+    <br>
+</div>
+<hr>
+<!-- Balance -->
+<div class="container text-center ">
+    <div class="container mt-5 w-50">
+        <label class="text-center" style="color: red;font-size: 20px;font-weight: bold;">{{msg}}</label>
+    </div>
+</div>
+<div class="container p-2">
+    <div class="container mt-5 w-25">
+
+        <form method="POST" action="/paythemoney">
+            <div class="form-group ">
+
+
+                <input type="number" class="form-control" id="balance" name="balance" aria-describedby="balance"
+                    placeholder="Amount" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-large w-100">Pay</button>
+        </form>
+    </div>
+
+</div>
+{% endblock %}
